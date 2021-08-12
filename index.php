@@ -1,6 +1,6 @@
 <html>
 <head>
-<title>Bond Web Service Demo</title>
+<title>Bond Web Service Demo!</title>
 <style>
 body {font-family:georgia;}
 </style>
@@ -25,7 +25,7 @@ function loadAJAX(cat)
 	$.ajax({
 		type:"GET",
 		dataType: "json",
-		url: "api.php?cat=" + cat,
+		url: "api.php?cat=" + cat;
 		success:bondJSON
 	});
 
@@ -37,11 +37,10 @@ function toConsole(data)
 	console.log(data); //to view,use Chrome console, ctrl + shift + j
 }
 
-function bondJSON(data){
+function bondJSON(data) {
 //JSON processing data goes here
 	console.log(data)
 
-	$("#output").text(JSON.stingify(data));
 
 }
 
