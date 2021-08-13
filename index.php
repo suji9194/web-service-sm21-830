@@ -61,11 +61,13 @@ function bondJSON(data) {
 	// this defines the type of info returned 
 	$('#filmtitle').html(data.title);
 
+	$('#films').html('');
+
 	$.each(data.films,function(i,item){
 		let str = bondTemplate(item);
 
 		$('<div></div>').html(str).appendTo('#films');
-
+		
 	});
 
 
@@ -96,7 +98,7 @@ function bondTemplate(film){
 				<b>Bond: </b> ${film.Bond}<br />
 				<b>Budget: </b> ${film.Budget}<br />
 				<b>Box Office: </b> ${film.BoxOffice}<br />
-				<div class="pic"><img src="thumbnails/image" /></div>
+				<div class="pic"><img src="thumbnails/${film.Image}" /></div>
 			</div>
 	`;
 }
