@@ -12,7 +12,7 @@
 		position: relative;
 	}
 
-	.pc{
+	.pic{
 		position: absolute;
 		right:10px;
 		top:10px;
