@@ -58,16 +58,38 @@ function bondJSON(data) {
 	//using this i can see the object in the console
 	console.log(data);
 
+	$('#filmtitle').html(data.);
 	// in this way we can see all of the data on the page 
+	/*
 	let myData = JSON.stringify(data,null,4);
 	myData = '<pre>' + myData + '</pre>';
 	$("#output").html(myData);
+	*/
+
+
 
 	// this works, but the text is all bunched up
 	//$("#output").text(JSON.stringify(data));
 
 }
 
+function bondTemplate(film){
+	return `
+			<div class="film">
+				<b>Film:</b> ${film.Film}<br />
+				<b>Title: </b>${film.Title}<br />
+				<b>Year: </b> ${film.Year}<br />
+				<b>Director: </b> ${film.Director}<br />
+				<b>Producers: </b> ${film.Producers}<br />
+				<b>Writers: </b> ${film.Writers}<br />
+				<b>Composer: </b> ${film.Composer}<br />
+				<b>Bond: </b> ${film.Bond}<br />
+				<b>Budget: </b> ${film.Budget}<br />
+				<b>Box Office: </b> ${film.BoxOffice}<br />
+				<div class="pic"><img src="thumbnails/image" /></div>
+			</div>
+	`;
+}
 </script>
 </head>
 	<body>
@@ -76,6 +98,7 @@ function bondJSON(data) {
 		<a href="box" class="category">Bond Films By International Box Office Totals</a>
 		<h3 id="filmtitle">Title Will Go Here</h3>
 		<div id="films">
+			<!--
 			<div class="film">
 				<b>Film: </b> 1<br />
 				<b>Title: </b> Dr. No<br />
@@ -89,6 +112,7 @@ function bondJSON(data) {
 				<b>Box Office: </b> $59,567,035.00<br />
 				<div class="pic"><img src="thumbnails/dr-no.jpg" /></div>
 			</div>
+			-->
 		</div>
 		<div id="output">Results go here</div>
 	</body>
