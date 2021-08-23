@@ -55,7 +55,7 @@ function toConsole(data)
 function bondJSON(data) {
 //JSON processing data goes here
 
-	//using this i can see the object in the console
+	//using this I can see the object in the console
 	console.log(data);
 
 	// this defines the type of info returned 
@@ -66,13 +66,13 @@ function bondJSON(data) {
 	$.each(data.films,function(i,item){
 		let str = bondTemplate(item);
 
-		//$('<div></div>').html(str).appendTo('#films');
-		//$str.appendTo('#films');
-
-		$('#films').appendTo(str);
+		$('<div></div>').html(str).appendTo('#films');
 		
-	});
+		
+	}); 
 
+	// this works, but the text is all bunched up
+	//$("#output").text(JSON.stringify(data));
 
 	// in this way we can see all of the data on the page 
 	/*
@@ -81,10 +81,7 @@ function bondJSON(data) {
 	$("#output").html(myData);
 	*/
 
-
-
-	// this works, but the text is all bunched up
-	//$("#output").text(JSON.stringify(data));
+	
 
 }
 
